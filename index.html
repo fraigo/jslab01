@@ -2,10 +2,25 @@
 <html>
 <head>
 	<title>JS Lab 01</title>
-	<script src="script.js" defer ></script>
+	
 </head>
 <body>
+	<h1>JS Lab 01</h1>
+	<script>
+	
+	//native console.log()
+	var browserConsoleLog=console.log;
 
+	//log to screen
+	console.log=function(obj){
+		browserConsoleLog(obj);
+		var el=document.createElement("pre");
+		el.innerHTML=obj+"<br>";
+		document.body.appendChild(el);
+
+	}
+	</script>
+	<script src="script.js" defer ></script>
 
 
 
